@@ -10,7 +10,7 @@ import os
 import torch.nn.functional as F
 from collections import defaultdict
 
-from Hypergraph_model import HHGCN
+from Hypergraph_model import HGCN
 from util import llprint, multi_label_metric, ddi_rate_score, get_n_params
 
 torch.manual_seed(1203)
@@ -220,7 +220,7 @@ def main():
     ehr_hypergraph_adj = np.array(ehr_hypergraph_adj)
     ehr_hypergraph_adj = torch.tensor(ehr_hypergraph_adj, dtype=torch.float32).to(device)
 
-    model = HHGCN(
+    model = HGCN(
         vocab_size=vocab_size,
         ehr_hypergraph_adj=ehr_hypergraph_adj,
         ddi_adj=ddi_adj,
