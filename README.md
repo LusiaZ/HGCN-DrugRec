@@ -1,8 +1,8 @@
-# HHDCN-DrugRec
-HHGCN-DrugRec: Hierarchical HyperGraph Convolution Network for Drug Combination Recommendation
+# HGCN-DrugRec
+HGCN-DrugRec: HyperGraph Convolution Network for Drug Combination Recommendation
 
 ## Overview
-This repository contains code necessary to run HHGCN model. HHGCN is an end-to-end model mainly based on hypergraph convolutional network (HGCN). We employ a method of department division to process the [MIMIC-IV](https://mimic.mit.edu/docs/iv/modules/hosp/) dataset and demonstrate
+This repository contains code necessary to run HGCN model. HGCN is an end-to-end model mainly based on hypergraph convolutional network (HGCN). We employ a method of department division to process the [MIMIC-IV](https://mimic.mit.edu/docs/iv/modules/hosp/) dataset and demonstrate
 the superior performance of our approach, surpassing most existing models.
 
 ## Requirements
@@ -18,7 +18,7 @@ the superior performance of our approach, surpassing most existing models.
 - The division of departments is based on the curr_service field from the [services](https://mimic.mit.edu/docs/iv/modules/hosp/services/) table.
 - The data used in this experiment are from the GU, OMED, and ORTHO departments.
 - The data preprocessing code is provided in ./data/process_mimic4.py.
-- The code for generating the hierarchical hypergraph is in ./data/hypergraph_generation.py.
+- The code for generating the hypergraph is in ./data/hypergraph_generation.py.
 
 ### High-level Clarifications on How to Map ATC Code to SMILES
 - The original prescriptions.csv file provides ndc to drugname mapping.
@@ -40,5 +40,5 @@ Traning codes can be found in ./src/
 
 ### Run the Code
 ```python
-python HHGCN.py
+python HGCN.py
 ```
