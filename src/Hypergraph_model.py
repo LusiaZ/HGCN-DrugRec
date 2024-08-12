@@ -118,9 +118,9 @@ class HyperGCN(nn.Module):
         node_embeddings = hypergraph_embeddings + graph_embeddings
         return node_embeddings
 
-class HHGCN(nn.Module):
+class HGCN(nn.Module):
     def __init__(self, vocab_size, ehr_hypergraph_adj, ddi_adj, emb_dim, device, ddi_in_memory=True):
-        super(HHGCN, self).__init__()
+        super(HGCN, self).__init__()
         self.device = device
         self.vocab_size = vocab_size
         self.ddi_in_memory = ddi_in_memory
